@@ -1,0 +1,11 @@
+package com.website.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.website.model.AuthEntity;
+
+public interface AuthRepo extends JpaRepository<AuthEntity, String> {
+    
+    AuthEntity findByEmailAndPassword(String email, String password);
+}
+

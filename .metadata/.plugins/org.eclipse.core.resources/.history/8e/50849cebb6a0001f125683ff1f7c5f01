@@ -1,0 +1,12 @@
+package authentication;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public interface AuthService {
+	
+	AuthEntity registerUser(AuthEntity authEntity);
+	AuthEntity loginUser(String email,String password);
+
+}

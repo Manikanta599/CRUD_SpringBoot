@@ -1,0 +1,34 @@
+package com.website.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.website.Repo.AuthRepo;
+import com.website.model.AuthEntity;
+
+@Service
+public class AuthServiceImpl implements AuthService {
+	
+	
+	@Autowired
+	private AuthRepo authRepo;
+	@Override
+	//register new user
+	public AuthEntity registerUser(AuthEntity authentity)
+	{
+		return authRepo.save(authentity);
+	}
+	
+	//Authenticate a user for login
+	@Override
+	public AuthEntity loginUser(String email,String password)
+	{
+		return authRepo.findByEmailandPassword(email, password);
+	}
+
+	
+	
+	
+	
+
+}
