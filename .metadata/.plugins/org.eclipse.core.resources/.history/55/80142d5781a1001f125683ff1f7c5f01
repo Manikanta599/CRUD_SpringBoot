@@ -1,0 +1,13 @@
+package com.website.Repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.website.model.EmployeeDetails;
+
+public interface EmployeeRepo extends JpaRepository<EmployeeDetails,Long>{
+	@Query("SELECT e, r FROM EmployeeDetails e JOIN RegDetails r ON e.regId = r.id")
+    List<Object[]> findAllEmployeesWithRegDetails();
+}

@@ -1,0 +1,5 @@
+package com.website.Repo;
+
+public interface EmployeeRepo {
+
+}

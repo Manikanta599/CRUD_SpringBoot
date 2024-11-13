@@ -1,0 +1,13 @@
+package com.website.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.website.dao.EmployeeDetailsWithReg;
+
+@Service
+public interface EmployeeService {
+	public List<EmployeeDetailsWithReg> getAllEmployeesWithRegDetails();
+
+}
