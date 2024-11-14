@@ -35,13 +35,22 @@ public class AuthEntity {
 	    public AuthEntity() {
 	    }
 
-	public AuthEntity(String fName, String lName, String phoneNumber, String email, String password) {
+	public AuthEntity(String fName, String lName, String phoneNumber, String email, String password,Integer id) {
 		super();
 		this.fName = fName;
 		this.lName = lName;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 		this.password = password;
+		this.id=id;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getfName() {
@@ -87,7 +96,7 @@ public class AuthEntity {
 	@Override
     public String toString() {
         return "AuthEntity{" +
-        
+        		", l_name='" + id + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", ph_num='" + phoneNumber + '\'' +
